@@ -1,0 +1,17 @@
+// colors
+$mainColor: #333;
+$highlight: #cf9200;
+$linkColor: $highlight;
+$linkColorHover: fade($highlight, 80%);
+
+
+// fonts
+$bold: 700;
+$mainFont: 'Open Sans', sans-serif;
+$mainFontWeight: 400;
+$headingFont: 'Roboto Condensed', sans-serif;
+$headingFontWeight: $bold;
+
+// font sizes
+$baseFontSize: 16;
+$headingFontSizes: (2.25, 1.5, 1.125, 1, 0.875, 0.75);

@@ -1,0 +1,40 @@
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+input[type='text'], 
+input[type='search'], 
+input[type='email'], 
+input[type='tel'], 
+input[type='password'], 
+input[type='color'], 
+input[type='date'], 
+input[type='url'], 
+textarea, 
+select {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+
+	width: 100%;
+	border: 1px solid #d9d9d9;
+	padding: 5px 10px;
+}
+
+textarea {
+	height: 200px;
+	@include resize(horizontal);
+}

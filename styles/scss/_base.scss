@@ -1,0 +1,119 @@
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+body {
+	color: $mainColor;
+	font-weight: $mainFontWeight;
+	font-family: $mainFont;
+	font-size: $baseFontSize/16 * 100%;
+}
+
+
+// Types
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headingFont;
+	font-weight: $headingFontWeight;
+	line-height: 1.1;
+}
+
+h1 { 
+	@include font-size(nth($headingFontSizes, 1)*$baseFontSize);
+}
+
+h2 { 
+	@include font-size(nth($headingFontSizes, 2)*$baseFontSize);
+}
+
+h3 { 
+	@include font-size(nth($headingFontSizes, 3)*$baseFontSize);
+}
+
+h4 { 
+	@include font-size(nth($headingFontSizes, 4)*$baseFontSize);
+}
+
+h5 { 
+	@include font-size(nth($headingFontSizes, 5)*$baseFontSize);
+}
+
+h6 { 
+	@include font-size(nth($headingFontSizes, 6)*$baseFontSize);
+}
+
+p  { 
+	@include font-size($baseFontSize); 
+	@include line-height($baseFontSize*1.5);
+
+	+ p:last-child{
+		margin-bottom: 0;
+	}
+}
+
+
+b, strong {
+	font-weight: $bold;
+}
+
+a {
+	color: $linkColor;
+
+	&:hover {
+		color: $linkColorHover;
+	}
+
+	&:focus {
+
+	}
+}
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+
+	ul, ol {
+
+	}
+
+	li {
+		@include font-size($baseFontSize); 
+		@include line-height($baseFontSize*1.5);
+	}
+}
+
+
+
+
+// Alignment
+// -------------------------
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+.text-nowrap { white-space: nowrap; }
+
+
+// Adjustment
+// -------------------------
+
+h1, h2, h3, h4, h5, h6, ul, ol, p {
+	&:empty {
+		display: none;
+	}
+}
+
+img {
+	vertical-align: middle;
+	
+	&.responsive {
+		display: block;
+		width: 100% \9; // ie hack for no support for max-width
+		max-width: 100%;
+		height: auto !important;
+	}
+}
